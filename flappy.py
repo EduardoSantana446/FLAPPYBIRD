@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("Mi primer juego con Pygame")
+pygame.display.set_caption("FLAPPY BIRD")
 
 # Colores
 AZUL = (0, 0, 0)
