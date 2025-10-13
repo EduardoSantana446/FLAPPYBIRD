@@ -1,21 +1,25 @@
 import pygame
+from sys import exit
+
+
+#Imagenes Cardenal Bird
+Fondo_principal = pygame.image.load("flappybirdbg.png")
+
+def imagenes():
+    screen.blit(Fondo_principal, (0, 0))
+    
 
 pygame.init()
-screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("FLAPPY BIRD")
+screen = pygame.display.set_mode((360, 640)) #Dimensiones de la pantalla
+pygame.display.set_caption("CARDENAL BIRD")
 
-# Colores
-AZUL = (0, 0, 0)
-BLANCO = (0, 0, 255)
 
-running = True
-while running:
+
+#BUCLE DE JUEGO
+while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
-
-    screen.fill(AZUL)          # Fondo negro
-    pygame.draw.circle(screen, BLANCO, (300, 200), 50)  # Círculo azul
-    pygame.display.flip()       # Actualiza la pantalla
-
-pygame.quit()
+            pygame.quit()
+            exit()
+    imagenes()        
+    pygame.display.update()
